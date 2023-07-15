@@ -1,24 +1,43 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom/cjs/react-router-dom.min';
 import './App.css';
+
+import Footer from './Components/Footer';
+
+
+import Home from './Components/Homepage/Home';
+import Second from './Components/Secondpage/Second';
+
+import Third from './Components/Thirdpage/Third';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='mainBack overflow-x-hidden'>
+      {/* <audio src={backgroundMusic} autoPlay loop /> */}
+
+
+      <Router>
+      
+      
+        
+        
+          <Route exact path="/" ><Home /></Route>
+          <Route path="/verse/:chapter"  ><Second /></Route>
+          <Route path="/chapter/:chapter/verses/:verse_num"  ><Third /></Route>
+          
+
+       
+
+        <Footer />
+
+
+
+
+      </Router>
+
+    </div >
   );
 }
 
