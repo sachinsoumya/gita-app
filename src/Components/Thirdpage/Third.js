@@ -32,19 +32,24 @@ export default function Third() {
 
     return (
         <div>
+        
+             
+            
             <div className='h2  font text-center my-2 text-decoration-underline'><i class="fas fa-om mx-2"></i>Chapter:{chapter} , Sloak : {verse_num}<i class="fas fa-om mx-2"></i></div>
             {image ?
                 <div className='h2 text-center'>
                     <div className='my-4' ><img src='https://bhagavadgitaapi.in/slok/krishna.png' alt='krishna' className='img-fluid rounded-circle border border-warning' /></div>
-                    {/* <div className='h-50'><img src={`${image.url}`} alt="hii"  className='img-fluid border border-warning rounded-4'/></div> */}
+                    
+                
 
 
 
                 </div> : <div className='text-center my-3 fs-3 text-danger'>Loading....,please wait</div>
                           
                 }
-            <Description chapter={chapter} verse={verse_num} pic={image.url} />
 
+            <Description chapter={chapter} verse={verse_num} pic={image.url} />
+            
         </div>
 
 

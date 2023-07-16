@@ -1,4 +1,5 @@
 import React, { useEffect ,useRef ,useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import '../Homepage/Home.css'
 
 
@@ -26,6 +27,15 @@ export default function Description(props) {
           }
 
     },[props.chapter , props.verse])
+
+
+    const history = useHistory();
+
+
+    const backTrack = ()=>{
+        history.push(`/verse/${props.chapter}`)
+
+    }
    
 
     return (
@@ -76,6 +86,7 @@ export default function Description(props) {
           }
 
          <div className='text-center my-3'><a href={`${props.pic}`} download class="btn btn-danger w-75 fs-5 fw-bolder">Download Slok </a></div>
+         <button type="button" className="btn btn-dark mx-3 my-2 btn-sm " data-bs-toggle="tooltip"  data-bs-placement="top" data-bs-title="Back" onClick={backTrack}> <i className="fas fa-arrow-circle-left"></i></button> 
         </div>
        
     )

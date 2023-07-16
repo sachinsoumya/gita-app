@@ -8,6 +8,7 @@ import Home from './Components/Homepage/Home';
 import Second from './Components/Secondpage/Second';
 
 import Third from './Components/Thirdpage/Third';
+import Navbar from './Components/Navbar';
 
 
 
@@ -19,6 +20,7 @@ function App() {
 
 
       <Router>
+        <Navbar />
       
       
         
