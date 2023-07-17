@@ -31,11 +31,11 @@ export default function Third() {
     }, [chapter,verse_num])
 
     return (
-        <div>
+        <div className='mt-5'>
         
              
             
-            <div className='h2  font text-center my-2 text-decoration-underline'><i class="fas fa-om mx-2"></i>Chapter:{chapter} , Sloak : {verse_num}<i class="fas fa-om mx-2"></i></div>
+            <div className='h2  font text-center my-2 text-decoration-underline pt-4'><i class="fas fa-om mx-2"></i>Chapter:{chapter} , Sloak : {verse_num}<i class="fas fa-om mx-2"></i></div>
             {image ?
                 <div className='h2 text-center'>
                     <div className='my-4' ><img src='https://bhagavadgitaapi.in/slok/krishna.png' alt='krishna' className='img-fluid rounded-circle border border-warning' /></div>

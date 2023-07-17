@@ -10,7 +10,7 @@ export default function Second() {
     console.log(chapter);
 
   return (
-    <div>
+    <div className='mt-5'>
        <Chapterdetail  chapter = {chapter}/>
        <Verses  chapter={chapter} />
     

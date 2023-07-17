@@ -43,7 +43,7 @@ export default function Description(props) {
         <div>
             {slok ?
 
-            <div className="card text-center bg-warning-subtle">
+            <div className="card text-center bg-warning-subtle ">
                 <div className="card-header">
                 <i class="fas fa-om fs-3"></i>
                 </div>

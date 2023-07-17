@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
         <div className="container-fluid ">
-        <div className="d-flex justify-content-center "><img src="../image/logo.png" alt="Hii" className="w-50" /></div>
+        <div className="d-flex justify-content-center "><img src="../image/logo.png" alt="Hii" className="logoWidth" /></div>
         <div className="my-3">
 
           <div className="text-center text-danger display-6 my-3 font">

@@ -42,7 +42,7 @@ export default function Chapterdetail(props) {
     // console.log(props.ch)
   return (
     <div>
-         <div  className='h2  font text-center my-2 text-decoration-underline'><i className="fas fa-om mx-2"></i>Chapter {des.chapter_number} - {des.name_translated}<i className="fas fa-om mx-2"></i></div>
+         <div  className='h2  font text-center my-2 text-decoration-underline pt-4 '><i className="fas fa-om mx-2"></i>Chapter {des.chapter_number} - {des.name_translated}<i className="fas fa-om mx-2"></i></div>
          <div  className=' fs-4 font text-center my-2'> {des.name_meaning}</div>
          <div className="font text-center my-2">{des.chapter_summary}</div>
   

@@ -1,0 +1,10 @@
+.setWidth{
+    width:75%;
+}
+
+@media (max-width: 914px) {
+    .setWidth{
+      width: 100%;
+    }
+    
+  }
