@@ -32,7 +32,7 @@ export default function Third() {
 
     return (
         <div className='mt-5'>
-        
+            
              
             
             <div className='h2  font text-center my-2 text-decoration-underline pt-4'><i class="fas fa-om mx-2"></i>Chapter:{chapter} , Sloak : {verse_num}<i class="fas fa-om mx-2"></i></div>

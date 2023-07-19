@@ -1,5 +1,6 @@
 import React, { useEffect ,useRef ,useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useSpeechSynthesis } from 'react-speech-kit'
 import '../Homepage/Home.css'
 
 
@@ -11,6 +12,9 @@ const surl = 'https://bhagavadgitaapi.in/slok'
 export default function Description(props) { 
     const isMountedRef = useRef(false);
     const [slok , setSlok] = useState("");
+
+    const { speak } = useSpeechSynthesis()
+    // const [text , setText] = useState("");
     console.log(props.pic)
 
     useEffect(()=>{
@@ -85,9 +89,29 @@ export default function Description(props) {
              </div>
           }
 
-         <div className='text-center my-3'><a href={`${props.pic}`} download class="btn btn-danger w-75 fs-5 fw-bolder">Download Slok </a></div>
+          <div className="row my-4 justify-content-center">
+            <div className="col-12 col-md-6 my-2 my-md-0">
+            <div className='text-center w-100 font'><a href={`${props.pic}`} download class="btn btn-danger w-75 fs-5 fw-medium">Download Slok <i className="fas fa-download mx-2"></i></a></div>
+
+            </div>
+            <div className="col-12 col-md-6 my-2 my-md-0">
+            <div className=' text-center w-100 font'><button type="button" className="btn btn-dark w-75 fs-5 fw-medium " data-bs-toggle="tooltip"  data-bs-placement="top" data-bs-title="Back" onClick={() => speak({ text: slok.adi.et })}>Listen Slok<i className="fas fa-volume-up mx-2"></i></button></div> 
+
+            </div>
+          
+        
+            
+
+          </div>
+
+         {/* <div className='text-center my-3'><a href={`${props.pic}`} download class="btn btn-danger w-75 fs-5 fw-bolder">Download Slok </a></div> */}
          <button type="button" className="btn btn-dark mx-3 my-2 btn-sm " data-bs-toggle="tooltip"  data-bs-placement="top" data-bs-title="Back" onClick={backTrack}> <i className="fas fa-arrow-circle-left"></i></button> 
+         
+        
+         
         </div>
+        
+        
        
     )
 }

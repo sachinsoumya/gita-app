@@ -110,12 +110,12 @@ export default function Verses(props) {
 
   return (
 
-    <div>
-       <div className="d-flex justify-content-between">
-        <button type="button" className="btn btn-dark mx-3 my-2 btn-sm " data-bs-toggle="tooltip"  data-bs-placement="top" data-bs-title="Back" onClick={backTrack} > <i className="fas fa-arrow-circle-left"></i></button> 
-        <button type="button" className="btn btn-dark mx-3 my-2 btn-sm " data-bs-toggle="tooltip"  data-bs-placement="top" data-bs-title="Back" disabled> <i class="fas fa-arrow-circle-right"></i></button> 
+    <div className='pt-2'>
+       {/* <div className="d-flex justify-content-between">
+       
         
-        </div>
+        
+        </div> */}
 
        
       <div className="h2 font text-center "> Sloks </div>
@@ -123,6 +123,8 @@ export default function Verses(props) {
      
       
       <div className="row  gx-3 gy-3 px-2 py-3">{getVerse()}</div>
+
+      <button type="button" className="btn btn-dark mx-3 my-2 btn-sm " data-bs-toggle="tooltip"  data-bs-placement="top" data-bs-title="Back" onClick={backTrack} > <i className="fas fa-arrow-circle-left"></i></button> 
 
       
     </div>

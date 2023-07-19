@@ -1,0 +1,11 @@
+.qWidth{
+    width: 75%;
+}
+
+
+@media (max-width: 914px) {
+    .qWidth{
+      width: 100%;
+    }
+    
+  }
