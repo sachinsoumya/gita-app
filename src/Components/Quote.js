@@ -1,18 +1,28 @@
 import React from 'react'
 import './Quote.css'
+import './font.css'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 
 
 export default function Quote() {
+ const history = useHistory();
+
+ const backtoHome = ()=>{
+    history.push('/');
+ }
+
+
+
     return (
         <div className='my-5 '>
-            <div className='text-center py-4 px-2 px-md-0'> <img src="https://bhagavadgita.io/static/images/gita/bhagavadgita-6.jpg" alt="arjuna and krishna" className='qWidth rounded ' /></div>
+            <div className='text-center py-4 px-2 px-md-0'> <img src="https://bhagavadgita.io/static/images/gita/bhagavadgita-6.jpg" alt="arjuna and krishna" className='qWidth rounded shadow-lg ' /></div>
 
 
             <div className="text-center text-danger display-6 my-3 font px-2 px-md-0">
                 <div><i className="fas fa-om mx-2 display-3 fw-bold"></i></div>
                 Bhagavad Gita Quotes By Lord Krishna
             </div>
-            <div className='fs-4 px-3 px-md-5'>
+            <div className='fs-4 px-3 px-md-5 font'>
 
                 <div>1. Whenever dharma declines and the purpose of life is forgotten, I manifest myself on earth. I am born in every age to protect the good, to destroy evil, and to reestablish dharma.</div>
                 <div className='mt-3'>2. As they approach me, so I receive them. All paths, Arjuna, lead to me.</div>
@@ -41,6 +51,9 @@ export default function Quote() {
                 <div className='mt-3'>25. You have the right to work, but never to the fruit of work. You should never engage in action for the sake of reward, nor should you long for inaction.</div>
 
             </div>
+
+            <button type="button" className="btn btn-dark mx-3 mt-2 btn-sm " data-bs-toggle="tooltip"  data-bs-placement="top" data-bs-title="Back" onClick={backtoHome} > Back to Home</button> 
+
         </div>
     )
 }

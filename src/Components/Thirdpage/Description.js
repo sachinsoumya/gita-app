@@ -1,7 +1,7 @@
 import React, { useEffect ,useRef ,useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSpeechSynthesis } from 'react-speech-kit'
-import '../Homepage/Home.css'
+import '../font.css'
 
 
 const surl = 'https://bhagavadgitaapi.in/slok'

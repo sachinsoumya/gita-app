@@ -4,7 +4,8 @@ import  { useEffect , useRef ,useState } from 'react';
 
 
 
-import   '../Homepage/Home.css';
+// import   '../Homepage/Home.css';
+import '../font.css'
 
 const durl = 'https://bhagavad-gita3.p.rapidapi.com/v2/chapters'
 

@@ -27,6 +27,11 @@ export default function Navbar() {
                             <NavLink className="nav-link" to='/quote'> Quotes </NavLink>
 
                             </li>
+
+                            <li className='nav-item'>
+                            <NavLink className="nav-link" to='/special'> Slok of the day </NavLink>
+
+                            </li>
                        
                             
                         </ul>

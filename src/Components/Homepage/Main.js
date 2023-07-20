@@ -1,5 +1,7 @@
 import React from 'react'
 import './Home.css'
+import '../font.css'
+
 
 export default function Home() {
   return (

@@ -11,6 +11,8 @@ import Third from './Components/Thirdpage/Third';
 import Navbar from './Components/Navbar';
 import About from './Components/About';
 import Quote from './Components/Quote';
+import Contact from './Components/Contact';
+import Special from './Components/Special';
 
 
 
@@ -30,6 +32,8 @@ function App() {
           <Route exact path="/" ><Home /></Route>
           <Route path="/about"><About /></Route>
           <Route path="/quote"><Quote /></Route>
+          <Route path = "/contact"><Contact/></Route>
+          <Route path = "/special"><Special/></Route>
           <Route path="/verse/:chapter"  ><Second /></Route>
           <Route path="/chapter/:chapter/verses/:verse_num"  ><Third /></Route>
           

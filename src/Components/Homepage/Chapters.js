@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useRef } from 'react'
 import { useState } from 'react';
 import './Home.css';
+import '../font.css'
 import { NavLink } from 'react-router-dom'
 
 

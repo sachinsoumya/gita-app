@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import Description from './Description';
+import '../font.css'
 
 const iurl = "https://bhagavadgitaapi.in/slok"
 

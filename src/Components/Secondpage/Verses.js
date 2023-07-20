@@ -1,7 +1,7 @@
 
 
 import React, { useEffect, useRef, useState } from 'react';
-import '../Homepage/Home.css';
+import '../font.css';
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
