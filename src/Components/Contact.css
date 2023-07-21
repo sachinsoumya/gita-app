@@ -1,16 +1,15 @@
 .wide {
-    width: 50%;
+  width: 50%;
+}
+
+@media (max-width: 914px) {
+  .wide {
+    width: 80%;
   }
-  
-  @media (max-width: 914px) {
-    .wide {
-      width: 80%;
-    }
 }
 
 @media (max-width: 541px) {
-    .wide {
-      width: 100%;
-      
-    }
+  .wide {
+    width: 100%;
+  }
 }

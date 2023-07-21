@@ -48,7 +48,8 @@ export default function Dropdown() {
         setChapter(chapter);
         fetch(`${vsurl}/${chapter}/verses/`, options)
             .then((res) => res.json())
-            .then((data) => setVersenum(data));
+            .then((data) => setVersenum(data))
+            .catch((err) => console.log(err.message))
     }
 
 
@@ -78,7 +79,7 @@ export default function Dropdown() {
                         {chnumber ? chnumber.map((item) => {
                             return <option key={item.id} value={item.chapter_number}>{item.chapter_number}</option>
 
-                        }) : <option >Data is coming</option>}
+                        }) : <option >1</option>}
 
 
 
@@ -92,7 +93,7 @@ export default function Dropdown() {
                         <option value="1">-----Select Sloks----</option>
                         {versenum ? versenum.map((item) => {
                             return <option key={item.id} value={item.verse_number}>{item.verse_number}</option>
-                        }) : <option >Data is coming</option>}
+                        }) : <option >1</option>}
 
 
                     </select>

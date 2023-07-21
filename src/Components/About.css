@@ -1,10 +1,9 @@
-.setWidth{
-    width:75%;
+.setWidth {
+  width: 75%;
 }
 
 @media (max-width: 914px) {
-    .setWidth{
-      width: 100%;
-    }
-    
+  .setWidth {
+    width: 100%;
   }
+}

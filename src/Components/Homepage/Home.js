@@ -6,11 +6,11 @@ import Dropdown from '../Dropdown'
 export default function Home() {
   return (
     <div className='mt-5'>
-        <Main />
-        <Dropdown />
-        <Chapters />
+      <Main />
+      <Dropdown />
+      <Chapters />
 
     </div>
-    
+
   )
 }

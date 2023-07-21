@@ -1,9 +1,9 @@
-.logoWidth {
-  width: 50%;
+.speWidth {
+  width: 75%;
 }
 
 @media (max-width: 914px) {
-  .logoWidth {
+  .speWidth {
     width: 100%;
   }
 }

@@ -5,17 +5,17 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 
 
 export default function Quote() {
- const history = useHistory();
+    const history = useHistory();
 
- const backtoHome = ()=>{
-    history.push('/');
- }
+    const backtoHome = () => {
+        history.push('/');
+    }
 
 
 
     return (
         <div className='my-5 '>
-            <div className='text-center py-4 px-2 px-md-0'> <img src="https://bhagavadgita.io/static/images/gita/bhagavadgita-6.jpg" alt="arjuna and krishna" className='qWidth rounded shadow-lg ' /></div>
+            <div className='text-center py-4 px-2 px-lg-0'> <img src="https://bhagavadgita.io/static/images/gita/bhagavadgita-6.jpg" alt="arjuna and krishna" className='qWidth rounded shadow-lg ' /></div>
 
 
             <div className="text-center text-danger display-6 my-3 font px-2 px-md-0">
@@ -52,7 +52,7 @@ export default function Quote() {
 
             </div>
 
-            <button type="button" className="btn btn-dark mx-3 mt-2 btn-sm " data-bs-toggle="tooltip"  data-bs-placement="top" data-bs-title="Back" onClick={backtoHome} > Back to Home</button> 
+            <button type="button" className="btn btn-dark mx-3 mt-2 btn-sm " data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Back" onClick={backtoHome} > Back to Home</button>
 
         </div>
     )

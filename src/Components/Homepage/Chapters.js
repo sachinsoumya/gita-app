@@ -4,6 +4,13 @@ import { useState } from 'react';
 import './Home.css';
 import '../font.css'
 import { NavLink } from 'react-router-dom'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
+AOS.init({
+    offset: 300,
+    duration: 1200
+});
 
 
 
@@ -49,16 +56,16 @@ export default function Chapters() {
         <div className='container-fluid py-3 mt-3'>
 
 
-            
+
 
             <div className="text-danger display-6 text-center my-2 font"> Chapters</div>
-            <div className="row justify-content-between gx-5 gy-3">
+            <div className="row justify-content-between gx-5 gy-3" data-aos="fade-up">
                 {chapters ? chapters.map((item) => {
                     return (
 
 
 
-                        <div className="col-12 col-md-6 col-lg-4 text-center ">
+                        <div className="col-12 col-md-6 col-lg-4 text-center " key={item.id}>
                             <NavLink to={`/verse/${item.chapter_number}`} className="text-decoration-none">
                                 <div className="card bg-warning h-100 ">
                                     <div className="card-header font ">
@@ -86,8 +93,8 @@ export default function Chapters() {
                     )
                 }) :
                     <div className='text-center my-3'>
-                        <div class="spinner-grow text-danger " role="status">
-                            <span class="visually-hidden">Loading...</span>
+                        <div className="spinner-grow text-danger " role="status">
+                            <span className="visually-hidden">Loading...</span>
                         </div>
                     </div>
                 }
