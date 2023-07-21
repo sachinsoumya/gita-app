@@ -30,7 +30,7 @@ export default function Special() {
         verseNum = Math.floor(Math.random() * 10) + 1;
         fetch(`${surl}/${chapter}/${verseNum}`)
           .then((res) => res.json())
-          .then((data) => sessionStorage.getItem("slok") ? getSlok() : sessionStorage.setItem("slok", JSON.stringify(data)))
+          .then((data) => sessionStorage.getItem("slok") ? getSlok() : setData(data))
           .catch((err) => console.log(err.message))
 
 
@@ -41,6 +41,18 @@ export default function Special() {
     }
 
 
+    const setData = (data) => {
+      sessionStorage.setItem("slok", JSON.stringify(data));
+      getSlok();
+    }
+
+
+    const getSlok = () => {
+      let s = JSON.parse(sessionStorage.getItem('slok'));
+      setSlok(s);
+    }
+
+
 
 
 
@@ -48,10 +60,13 @@ export default function Special() {
   }, []);
 
 
-  const getSlok = () => {
-    let s = JSON.parse(sessionStorage.getItem('slok'));
-    setSlok(s);
-  }
+  // const getSlok = () => {
+  //   let s = JSON.parse(sessionStorage.getItem('slok'));
+  //   setSlok(s);
+  // }
+
+
+
 
 
 
