@@ -4,7 +4,16 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import './Special.css'
 import './font.css'
 
-const surl = "https://bhagavadgitaapi.in/slok"
+const surl = "https://bhagavad-gita3.p.rapidapi.com/v2"
+
+
+const options = {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': '65c54ae186msh924f4fdd8943cc7p166aa3jsn3f53457fe6d3',
+    'X-RapidAPI-Host': 'bhagavad-gita3.p.rapidapi.com'
+  }
+};
 
 
 
@@ -28,7 +37,7 @@ export default function Special() {
       const getData = () => {
         chapter = Math.floor(Math.random() * 18) + 1;
         verseNum = Math.floor(Math.random() * 10) + 1;
-        fetch(`${surl}/${chapter}/${verseNum}`)
+        fetch(`${surl}/chapters/${chapter}/verses/${verseNum}/`, options)
           .then((res) => res.json())
           .then((data) => sessionStorage.getItem("slok") ? getSlok() : setData(data))
           .catch((err) => console.log(err.message))
@@ -99,7 +108,7 @@ export default function Special() {
           <div className="card-body">
             <div className="my-3 my-lg-5">
               <div className="h4 font text-center text-decoration-underline ">Slok</div>
-              <h5 className="card-title font  fw-bold fs-2">{slok.slok}</h5>
+              <h5 className="card-title font  fw-bold fs-2">{slok.text}</h5>
             </div>
 
             <div className='my-3 my-lg-5'>
@@ -108,14 +117,23 @@ export default function Special() {
               <div className="card-text fs-4">{slok.transliteration}</div>
 
             </div>
+
+
+            <div className='my-3 my-lg-5'>
+              <div className="h4 font text-center text-decoration-underline ">Meanings</div>
+
+              <div className="card-text fs-4">{slok.word_meanings}</div>
+
+            </div>
+
             <div className="my-3 my-lg-5">
               <div className="h4 font text-center text-decoration-underline ">Translation in Hindi</div>
-              <p className="card-text fs-4 font">{slok.tej.ht}</p>
+              <p className="card-text fs-4 font">{slok.translations[6].description}</p>
 
             </div>
             <div className="my-3 my-lg-5">
               <div className="h4 font text-center text-decoration-underline ">Translation in English</div>
-              <p className="card-text fs-4 font">{slok.adi.et}</p>
+              <p className="card-text fs-4 font">{slok.translations[0].description}</p>
 
             </div>
 

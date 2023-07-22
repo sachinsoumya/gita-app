@@ -1,7 +1,10 @@
 import React from 'react'
 import './Contact.css'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 
 export default function Contact() {
+
+    const history = useHistory();
     return (
         <div>
 
@@ -70,6 +73,10 @@ export default function Contact() {
 
 
                 </div>
+
+                <button type="button" className="btn btn-dark mx-3 my-0 btn-sm " data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Back" onClick={() => history.push('/')} > Back to Home</button>
+
+
             </div>
         </div>
     )
